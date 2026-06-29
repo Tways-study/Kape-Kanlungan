@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Cabin:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  /* Kapé Kanlungan · Refuge at Dusk */
+  /* Dark sanctuary — the café interior after the afternoon light fades */
+
+  --bg:        oklch(0.12 0.020 48);    /* deep warm near-black, like espresso grounds */
+  --surface:   oklch(0.17 0.025 50);    /* panels, subtle lifts */
+  --lift:      oklch(0.22 0.030 52);    /* hover / active states */
+  --amber:     oklch(0.72 0.145 80);    /* warm lamplight gold — the only accent */
+  --amber-dk:  oklch(0.60 0.130 72);    /* hover on amber elements */
+  --botanical: oklch(0.54 0.095 148);   /* coffee-plant green */
+  --ink:       oklch(0.90 0.015 80);    /* warm cream / parchment — main text */
+  --muted:     oklch(0.56 0.018 65);    /* secondary text */
+  --rim:       oklch(0.26 0.020 52);    /* borders on dark bg */
+
+  --font-display: 'Amatic SC', cursive;
+  --font-serif:   'Cardo', Georgia, serif;
+  --font-body:    'Cabin', system-ui, sans-serif;
+
+  --z-base:    10;
+  --z-sticky:  20;
+  --z-overlay: 30;
+  --z-modal:   50;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--amber); opacity: 0.4; border-radius: 3px; }
+
+::selection {
+  background: var(--amber);
+  color: var(--bg);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  text-wrap: balance;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
