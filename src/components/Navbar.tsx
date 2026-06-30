@@ -6,6 +6,7 @@ import logoImg from '../assets/logo.jpg'
 const links = [
   { label: 'About', href: '#story' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'Menu', href: '#menu' },
   { label: 'Visit', href: '#visit' },
 ]
 
@@ -34,7 +35,7 @@ export default function Navbar() {
       <motion.header
         className="fixed top-0 left-0 right-0"
         animate={{
-          backgroundColor: scrolled ? 'oklch(0.12 0.020 48 / 0.90)' : 'oklch(0.12 0.020 48 / 0)',
+          backgroundColor: scrolled ? 'oklch(0.12 0.020 48 / 0.96)' : 'oklch(0.12 0.020 48 / 0)',
           borderBottomColor: scrolled ? 'oklch(0.26 0.020 52)' : 'oklch(0.26 0.020 52 / 0)',
         }}
         transition={{ duration: 0.4, ease: EASE }}
@@ -54,8 +55,8 @@ export default function Navbar() {
               style={{ boxShadow: '0 0 0 1.5px var(--amber)' }}
             />
             <span
-              className="hidden sm:block text-sm font-medium tracking-wide"
-              style={{ color: 'var(--ink)', fontFamily: 'var(--font-serif)' }}
+              className="hidden sm:block text-sm font-medium"
+              style={{ color: 'var(--ink)', fontFamily: 'var(--font-serif)', letterSpacing: '0.03em' }}
             >
               Kapé Kanlungan
             </span>
@@ -67,7 +68,7 @@ export default function Navbar() {
                 key={label}
                 href={href}
                 className="text-sm transition-colors duration-200"
-                style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)' }}
+                style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)', letterSpacing: '0.01em' }}
                 onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--ink)')}
                 onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--muted)')}
               >

@@ -22,7 +22,7 @@ function InfoRow({ icon, label, children }: { icon: ReactNode; label: string; ch
         >
           {label}
         </p>
-        <div style={{ color: 'var(--ink)', fontFamily: 'var(--font-body)', lineHeight: 1.6, fontSize: '0.925rem' }}>
+        <div style={{ color: 'var(--ink)', fontFamily: 'var(--font-body)', lineHeight: 1.6, fontSize: '0.9375rem' }}>
           {children}
         </div>
       </div>

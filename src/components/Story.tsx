@@ -57,7 +57,7 @@ export default function Story() {
           <motion.div
             {...reveal(0.1)}
             className="space-y-5 max-w-sm"
-            style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)', lineHeight: 1.75, fontSize: '0.975rem' }}
+            style={{ color: 'var(--muted)', fontFamily: 'var(--font-body)', lineHeight: 1.75, fontSize: '1rem' }}
           >
             <p>
               Kapé Kanlungan started with one idea: that a good cup of coffee should feel like coming home.
