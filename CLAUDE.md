@@ -28,21 +28,23 @@ Each section is its own component in `src/components/`. There are no shared util
 
 All design tokens are CSS custom properties defined in `:root` inside `src/index.css`. **Never hard-code colours or fonts inline** — always reference a variable.
 
+The site uses a **dark theme** throughout — `--bg` is deep warm near-black, all text tokens are light.
+
 ### Color tokens
 | Variable | Role |
 |---|---|
-| `--bg` | Page background (white) |
-| `--surface` | Card / subtle background |
-| `--coffee` | Bold accent sections (dark espresso) |
-| `--coffee-lt` | Hover on coffee-bg elements |
-| `--amber` | Primary CTA, accents, gold |
+| `--bg` | Page background (deep warm near-black) |
+| `--surface` | Panels, cards |
+| `--lift` | Hover / active states on surface elements |
+| `--amber` | Primary CTA, accents, warm gold |
 | `--amber-dk` | Hover on amber elements |
 | `--botanical` | Coffee-plant green |
-| `--ink` | Body text (warm near-black) |
-| `--muted` | Secondary text on white |
-| `--ink-inv` | Text on dark (`--coffee`) sections |
-| `--muted-inv` | Secondary text on dark sections |
-| `--rim` | Subtle border on white |
+| `--ink` | Main text (warm cream / parchment) |
+| `--muted` | Secondary text |
+| `--rim` | Borders on dark background |
+
+### Z-index tokens
+`--z-base: 10` / `--z-sticky: 20` / `--z-overlay: 30` / `--z-modal: 50` — always use these on `zIndex` style props rather than bare numbers.
 
 ### Typography
 | Variable | Usage |
@@ -54,10 +56,10 @@ All design tokens are CSS custom properties defined in `:root` inside `src/index
 `h1`, `h2`, `h3` are globally set to `--font-serif` in `index.css`.
 
 ### Animation pattern
-Every animated component:
+Each component defines `const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1]` locally. Every animated component:
 1. Calls `const prefersReduced = useReducedMotion()` from `motion/react`
 2. Passes `prefersReduced ? {} : { opacity: 0, y: N }` as the `initial` prop
-3. Uses the shared easing constant `const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1]`
+3. Hero plays on load (`animate`); all other sections trigger on scroll (`whileInView` with `viewport: { once: true }`).
 
 ## Brand Rules (from `PRODUCT.md`)
 
