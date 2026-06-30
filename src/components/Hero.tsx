@@ -67,7 +67,7 @@ export default function Hero() {
             style={{
               fontFamily: 'var(--font-serif)',
               fontSize: '1.05rem',
-              color: 'oklch(0.90 0.015 80 / 0.65)',
+              color: 'oklch(0.94 0.015 80 / 0.80)',
               lineHeight: 1.65,
             }}
           >
@@ -88,9 +88,9 @@ export default function Hero() {
             <a
               href="#story"
               className="text-sm transition-colors duration-200 underline underline-offset-4 decoration-1"
-              style={{ color: 'oklch(0.90 0.015 80 / 0.55)' }}
+              style={{ color: 'oklch(0.94 0.015 80 / 0.72)' }}
               onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = 'var(--ink)')}
-              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'oklch(0.90 0.015 80 / 0.55)')}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = 'oklch(0.94 0.015 80 / 0.72)')}
             >
               Our story
             </a>

@@ -12,8 +12,8 @@
   --amber:     oklch(0.72 0.145 80);    /* warm lamplight gold — the only accent */
   --amber-dk:  oklch(0.60 0.130 72);    /* hover on amber elements */
   --botanical: oklch(0.54 0.095 148);   /* coffee-plant green */
-  --ink:       oklch(0.90 0.015 80);    /* warm cream / parchment — main text */
-  --muted:     oklch(0.56 0.018 65);    /* secondary text */
+  --ink:       oklch(0.94 0.015 80);    /* warm cream / parchment — main text */
+  --muted:     oklch(0.65 0.018 65);    /* secondary text */
   --rim:       oklch(0.26 0.020 52);    /* borders on dark bg */
 
   --font-display: 'Amatic SC', cursive;
